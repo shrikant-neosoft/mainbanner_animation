@@ -1,0 +1,208 @@
+*{
+    box-sizing: border-box;
+    outline: none;
+}
+
+body{
+
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+@keyframes animation0 {
+    0% {
+        position: fixed;
+    }
+    99%{
+        position: fixed;
+    }
+
+    100% {
+        position: relative;
+    }
+}
+
+@keyframes animation1 {
+    0% {
+        opacity: 0;
+    }
+    20%{
+         opacity: 1;
+         margin-top:-100px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top:-100px;
+    }
+}
+@keyframes animation2 {
+    0% {
+        opacity: 0;
+        transform: translate(-50%,0%) scale(0);
+    }
+    20% {
+        opacity: 0;
+        transform: translate(-50%,0%) scale(0);
+    }
+
+    35%{
+        transform: translate(-50%,0%) scale(1);
+        opacity: 1;
+    }
+
+    50%{
+        transform: translate(-50%,0%) scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%,0%) scale(0);
+        opacity: 0;
+    }
+}
+@keyframes animation3 {
+    0% {
+        opacity: 0;
+        transform: translate(-50%,-50%) scale(0);
+    }
+    50% {
+        opacity: 0;
+        transform: translate(-50%,-50%) scale(0);
+    }
+
+    100% {
+        transform: translate(-50%,-50%) scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+
+.mainBanner{
+    position:fixed;
+    top: 0px;
+    // animation: animation0 1s linear infinite;
+    // animation-play-state: paused;
+    // animation-delay: calc(var(--scroll) * -1s);
+    .text-center{
+        text-align: center;
+    }
+
+    .mainBanner-container{
+        background-color: #000;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        position: relative;
+
+        .img-bg{
+            height: 100vh;
+            width: 100vw;
+            opacity: 0.7;
+            object-fit: cover;
+        }
+
+        .mainBanner--content-title{
+            color: #fff;
+            font-size: 56px;
+            
+         }
+         .mainBanner--content-para{
+            color: #fff;
+            font-size: 24px;
+         }
+
+        &.normal-mode{
+        
+            .mainBanner--wrapper{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                
+            }
+    
+    
+        }
+
+        &.animation-mode{
+            .mainBanner--wrapper{
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                
+            }
+
+            p{
+                font-size: 1rem;
+            }
+
+            .mainBanner--content{
+                position: relative;
+                width: 100vw;
+                height: 100vh;
+                .slide-animation{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    opacity: 1;
+                }
+
+                .slide1{
+                    animation: animation1 1s linear infinite;
+                    animation-play-state: paused;
+                    animation-delay: calc(var(--scroll) * -1s);
+                }
+                .slide2{
+                    animation: animation2 1s linear infinite;
+                    animation-play-state: paused;
+                    animation-delay: calc(var(--scroll) * -1s);
+                }
+                .slide3{
+                    animation: animation3 1s linear infinite;
+                    animation-play-state: paused;
+                    animation-delay: calc(var(--scroll) * -1s);
+                }
+            }
+
+
+        }
+    
+
+    }
+   
+
+
+
+}
+
+
+
+
+.demo-section{
+    height: 100vh;
+}
+
+
+.section2{
+    height: 100vh;
+    background-color: #000;
+    .animation-content {
+        position: absolute;
+        box-sizing: border-box;
+        left: 49px;
+        top: 58px;
+        transform-origin: 50% 50%;
+        opacity: 0.88;
+        width: 422px;
+        height: 386px;
+        border-radius: 0px;
+        background-color: rgba(255, 255, 255, 0);
+        transform: scale(1.19345, 1.19345);
+    }
+}

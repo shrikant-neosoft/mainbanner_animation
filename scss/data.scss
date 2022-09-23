@@ -1,0 +1,17 @@
+
+
+
+section{
+    height: 100vh;
+    position: relative;
+
+    h2{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.animation-box{
+    background-color: #999;
+}
